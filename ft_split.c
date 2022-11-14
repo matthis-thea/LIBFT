@@ -6,23 +6,13 @@
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:59:44 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/14 23:39:49 by haze             ###   ########.fr       */
+/*   Updated: 2022/11/15 00:09:30 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
-
-static void	free_malloc(char **str, int pos)
-{
-	int	i;
-
-	i = 0;
-	while (i++ < pos)
-		free(str[i]);
-	free(str);
-}
 
 static int	ft_alloc_nb_col(const char *s, char c)
 {
@@ -104,7 +94,7 @@ char	**ft_split(char const *s, char c)
 	int		taille;
 
 	taille = ft_alloc_nb_col(s, c);
-	if (*s == NULL)
+	if (*s == 0)
 	{
 		tab = malloc(sizeof(char *) * 1);
 		if (tab == NULL)
@@ -115,13 +105,8 @@ char	**ft_split(char const *s, char c)
 	tab = malloc(sizeof(char *) * (taille + 1));
 	if (tab == NULL)
 		return (0);
-	if (ft_alloc_totale(s, c, tab) == NULL)
-	{
-		free(tab);
-		return (tab);
-	}
-		tab = ft_alloc_totale(s, c, tab);
-		tab = ft_placement_mots(s, c, tab);
+	tab = ft_alloc_totale(s, c, tab);
+	tab = ft_placement_mots(s, c, tab);
 	tab[taille] = 0;
 	return (tab);
 }
