@@ -6,7 +6,7 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 14:31:01 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/14 10:40:17 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 12:16:33 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char	*ft_itoa(int n)
 	str = NULL;
 	if (n == -2147483648)
 	{
-		str = (char *) malloc(sizeof(char) * 13);
+		str = (char *) malloc(sizeof(char) * 12);
 		return (ft_strcpy(str, "-2147483648"));
 	}
 	if (n >= 0)

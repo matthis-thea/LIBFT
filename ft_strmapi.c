@@ -6,7 +6,7 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 07:17:59 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/14 10:37:35 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 14:06:49 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char				*tab;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	taille = ft_strtaille(s);
 	tab = (char *) malloc(sizeof(char) * (taille + 1));
 	if (tab == NULL)

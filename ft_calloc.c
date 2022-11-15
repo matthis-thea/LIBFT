@@ -6,13 +6,12 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 18:16:27 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/08 14:15:37 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 08:21:47 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <string.h>
 
 void	*ft_calloc(size_t elementCount, size_t elementSize)
 {

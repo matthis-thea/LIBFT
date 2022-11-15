@@ -6,7 +6,7 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 10:50:42 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/14 10:55:05 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 14:13:17 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putendl_fd(char *s, int fd)
 
 	i = 0;
 	if (s == NULL)
-		write(fd, "\n", 1);
+		return ;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);

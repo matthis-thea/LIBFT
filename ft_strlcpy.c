@@ -6,12 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 16:28:26 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/06 14:34:42 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 08:22:33 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 static unsigned int	ft_strlen_src(const char *str)
 {

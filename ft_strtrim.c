@@ -6,7 +6,7 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 17:31:56 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/11 14:13:32 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 14:07:47 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	n = 0;
 	i = 0;
 	str = NULL;
+	if (!s1 || !set)
+		return (NULL);
 	j = ft_strlenft(s1);
 	while (s1[i] && ft_strchrr(set, s1[i]) == 1)
 		i++;

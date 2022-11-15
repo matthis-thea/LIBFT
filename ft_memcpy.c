@@ -6,12 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 19:27:33 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/06 14:26:35 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 08:22:02 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "string.h"
 
 void	*ft_memcpy(void *dst, const	void *src, size_t n)
 {

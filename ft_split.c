@@ -3,16 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:59:44 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/15 00:09:30 by haze             ###   ########.fr       */
+/*   Updated: 2022/11/15 13:57:19 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
+
+char	**ft_free_malloc(char **tab, int pos)
+{
+	int	i;
+
+	i = 0;
+	while (i < pos)
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+	return (0);
+}
 
 static int	ft_alloc_nb_col(const char *s, char c)
 {
@@ -40,24 +54,22 @@ static char	**ft_alloc_totale(const char *s, char c, char **tab)
 	int		compteur;
 	int		j;
 
-	i = 0;
+	i = -1;
 	j = 0;
 	compteur = 0;
-	while (s[i])
+	while (s[++i])
 	{	
 		if (s[i] != c)
 			compteur++;
-		else if (s[i - 1] != c && i > 0)
+		if (((s[i - 1] != c && i > 0) && s[i] == c)
+			|| (s[i + 1] == '\0' && s[i] != c))
 		{
 			tab[j] = malloc(sizeof(char) * (compteur + 1));
 			if (tab[j] == NULL)
-				return (0);
+				return (ft_free_malloc(tab, j));
 			compteur = 0;
 			j++;
 		}
-		if (s[i + 1] == '\0' && s[i] != c)
-			tab[j] = malloc(sizeof(char) * (compteur + 1));
-		i++;
 	}
 	return (tab);
 }
@@ -93,8 +105,10 @@ char	**ft_split(char const *s, char c)
 	char	**tab;
 	int		taille;
 
+	if (s == NULL)
+		return (NULL);
 	taille = ft_alloc_nb_col(s, c);
-	if (*s == 0)
+	if (!*s)
 	{
 		tab = malloc(sizeof(char *) * 1);
 		if (tab == NULL)
@@ -104,9 +118,11 @@ char	**ft_split(char const *s, char c)
 	}
 	tab = malloc(sizeof(char *) * (taille + 1));
 	if (tab == NULL)
-		return (0);
+		return (NULL);
 	tab = ft_alloc_totale(s, c, tab);
+	if (tab == NULL)
+		return (NULL);
 	tab = ft_placement_mots(s, c, tab);
-	tab[taille] = 0;
+	tab[taille] = NULL;
 	return (tab);
 }

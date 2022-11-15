@@ -6,13 +6,12 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 16:16:21 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/14 11:57:33 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 12:11:49 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 static unsigned int	ft_strlentaille(const char *str)
 {
@@ -31,19 +30,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	str = NULL;
 	i = 0;
-	if (start >= ft_strlentaille(s) || s == NULL)
-	{
-		str = (char *) malloc(sizeof(char) * 1);
-		str[i] = 0;
-		return (str);
-	}
-	if (len >= SIZE_MAX)
-		str = (char *) malloc(sizeof(char) * (ft_strlentaille(s) + 1));
-	else
-		str = (char *) malloc(sizeof(char) * (len + 1));
+	if (!s)
+		return (0);
+	if (start >= ft_strlentaille(s))
+		len = 0;
+	if (ft_strlentaille(s) - start < len)
+		len = ft_strlentaille(s) - start;
+	str = malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (0);
-	while (s[start] && i < len)
+	while (len-- && s[start])
 	{
 		str[i] = s[start];
 		i++;

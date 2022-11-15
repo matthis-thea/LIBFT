@@ -6,12 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 08:34:11 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/06 16:35:17 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 08:21:58 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 #include <stdio.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t c)
