@@ -1,5 +1,9 @@
 NAME = libft.a
 
+SRC_BONUS = ft_lstnew_bonus.c \
+
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
+
 SRC  =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
 		ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c \
@@ -13,11 +17,11 @@ OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 
-$(NAME) : $(OBJ) 
-	 ar -crs $(NAME) $(OBJ)
+$(NAME) : $(OBJ) $(OBJ_BONUS)
+	 ar -crs $(NAME) $(OBJ) $(OBJ_BONUS)
 	
 clean :
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) $(OBJ_BONUS)
 
 fclean :	clean
 	rm -f $(NAME)

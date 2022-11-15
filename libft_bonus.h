@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   libft_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 09:03:32 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/15 14:58:57 by mthea            ###   ########.fr       */
+/*   Created: 2022/11/15 14:57:58 by mthea             #+#    #+#             */
+/*   Updated: 2022/11/15 14:59:41 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#ifndef LIBFT_BONUS_H
+# define LIBFT_BONUS_H
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-t_list *ft_lstnew(void * content)
+typedef struct s_list
 {
-	t_list *liste;
-	liste = (t_list *) malloc(sizeof(t_list));
-	liste->content = content;
-	liste->next = 0;
-	return(liste->content);
-}
+	void			*content;
+	struct s_list	*next;					
+}					t_list;
+t_list	*ft_lstnew(void *content);
+
+#endif
