@@ -6,12 +6,10 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:59:44 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/15 13:57:19 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/16 09:36:34 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	**ft_free_malloc(char **tab, int pos)

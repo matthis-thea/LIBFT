@@ -6,12 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 16:35:09 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/15 14:02:01 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 14:53:46 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_strlenn(char const *str)
 {

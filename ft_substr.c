@@ -6,12 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 16:16:21 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/15 12:11:49 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 14:52:56 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static unsigned int	ft_strlentaille(const char *str)
 {

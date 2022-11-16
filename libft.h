@@ -6,13 +6,15 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 11:42:48 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/15 12:13:58 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/16 11:06:45 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -54,5 +56,6 @@ typedef struct s_list
 	struct s_list	*next;					
 }					t_list;
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif

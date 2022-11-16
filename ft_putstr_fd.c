@@ -6,12 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 10:45:35 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/15 14:03:05 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 14:52:24 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {

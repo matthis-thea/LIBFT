@@ -6,12 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 17:31:56 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/15 14:07:47 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 14:52:53 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_strlenft(const char *str)
 {
@@ -64,7 +63,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	n = 0;
 	i = 0;
-	str = NULL;
 	if (!s1 || !set)
 		return (NULL);
 	j = ft_strlenft(s1);

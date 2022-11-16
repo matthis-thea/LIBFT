@@ -6,12 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 15:56:23 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/06 19:49:13 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 14:52:33 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *source)
 {

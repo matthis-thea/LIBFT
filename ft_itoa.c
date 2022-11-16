@@ -6,12 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 14:31:01 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/15 12:16:33 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 14:51:57 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static char	*ft_strcpy(char *dst, char *src)
 {

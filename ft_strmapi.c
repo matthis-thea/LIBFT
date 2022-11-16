@@ -6,12 +6,11 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 07:17:59 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/15 14:06:49 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/15 14:52:44 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_strtaille(const char *str)
 {

@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 10:33:02 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/15 14:52:13 by mthea            ###   ########.fr       */
+/*   Created: 2022/11/15 09:03:32 by mthea             #+#    #+#             */
+/*   Updated: 2022/11/16 11:36:27 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	write(fd, &c, 1);
+	t_list	*liste;
+
+	liste = malloc(sizeof(*liste));
+	if (liste == NULL)
+		return (0);
+	liste->content = content;
+	liste->next = 0;
+	return (liste);
 }
