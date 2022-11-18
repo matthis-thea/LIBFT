@@ -6,13 +6,13 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 13:38:27 by mthea             #+#    #+#             */
-/*   Updated: 2022/11/17 13:48:15 by mthea            ###   ########.fr       */
+/*   Updated: 2022/11/18 12:37:00 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (0);
